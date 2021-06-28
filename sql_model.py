@@ -86,7 +86,6 @@ class Database:
 
 
 if __name__=="__main__":
-	import random
 	db = Database()
 	random_word = db.select_random_word()[1]
 	db.close()
