@@ -38,6 +38,15 @@ class Database:
 	
 	def select_random_word(self):
 		return self.select_by_id(self.WORDS_TABLE, randint(1,1000))
+	
+	def select_random_phrase(self, length):
+		phrase = ""
+		while length > 0:
+			phrase += self.select_random_word()[1]
+			if length > 1:
+				phrase += " "
+			length-=1
+		return phrase
 
 	def select_by_id(self, table, id):
 		"""
@@ -87,5 +96,6 @@ class Database:
 
 if __name__=="__main__":
 	db = Database()
-	random_word = db.select_random_word()[1]
+	random_word = db.select_random_phrase(3)
+	print(random_word)
 	db.close()

@@ -24,7 +24,7 @@ def get_user_input_characters(user_input, output_row):
             # and wait for input
 
         # completely clear line
-        if c == '':
+        if c == '': # TODO: change to global constant for readability
             user_input = ''
             return False, user_input
         
@@ -50,7 +50,7 @@ def get_row_10_words(user_input_correct, word_idx, row_len):
 
 # END MY FUNCTIONS ============================================================
 
-# temp reading of file.. this should be stored into an arr instead
+# temp reading of file.. this should be stored into an arr instead #TODO: change this to rely on sql_model.py Database().select_random_phrase(length of phrase)
 my_file = './words.txt'
 
 with open(my_file, 'r') as fp:
