@@ -1,4 +1,4 @@
-import getch
+import getch # TODO: make the getch behavior OS agnostic
 import pretty_errors # pretty_errors for colored error msgs
 
 # MY FUNCTIONS ================================================================

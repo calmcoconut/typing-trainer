@@ -1,6 +1,6 @@
-import word_prompt, sys
+import sys
 
-USEROPTIONS = {"typing_length":"20"}
+USEROPTIONS = {"words":"20"}
 
 def main(argv):
 	"""
@@ -11,6 +11,11 @@ def main(argv):
 	else:
 		promptOptions()
 	# start program with option
+	startProgram(USEROPTIONS["words"])
+
+# TODO: implement
+def startProgram(words_prompt):
+	pass
 
 def parseFlags(argv):
 	for a in argv:
@@ -21,11 +26,12 @@ def parseFlags(argv):
 		elif "$100" in a:
 			words = "100"
 		else:
+			print("Command not recognized, defaulting to 20 words")
 			words = "20"
-	USEROPTIONS["typing_length"] = words
+	USEROPTIONS["words"] = words
 
 def promptOptions():
-	words = input("Welcome! please select an option:\n\ta.) 20 words\n\tb.)50 words\n\tc.) 50 words")
+	words = input("Welcome! please select an option:\n\ta.) 20 words\n\tb.) 50 words\n\tc.) 100 words\n")
 	if "a" in words:
 		words = "$20"
 	elif "b" in words:
@@ -38,3 +44,4 @@ def promptOptions():
 
 if __name__ == "__main__":
 	main(sys.argv)
+	print("you selected the option: " + USEROPTIONS["words"] + " words.")
