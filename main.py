@@ -19,11 +19,11 @@ def startProgram(words_prompt):
 
 def parseFlags(argv):
 	for a in argv:
-		if "$20" in a:
+		if "20" in a:
 			words = "20"
-		elif "$50" in a:
+		elif "50" in a:
 			words = "50"
-		elif "$100" in a:
+		elif "100" in a:
 			words = "100"
 		else:
 			print("Command not recognized, defaulting to 20 words")
@@ -33,13 +33,13 @@ def parseFlags(argv):
 def promptOptions():
 	words = input("Welcome! please select an option:\n\ta.) 20 words\n\tb.) 50 words\n\tc.) 100 words\n")
 	if "a" in words:
-		words = "$20"
+		words = "20"
 	elif "b" in words:
-		words = "$50"
+		words = "50"
 	elif "c" in words:
-		words = "$100"
+		words = "100"
 	else:
-		words = "$20"
+		words = "20"
 	parseFlags([words])
 
 if __name__ == "__main__":
