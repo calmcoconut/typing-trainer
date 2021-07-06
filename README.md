@@ -3,7 +3,8 @@
 #TODO
 
 Week 3
-Change words_prompt to rely on the sql db
+
+* Change words_prompt to rely on the sql db
 
 * Fix the magic constants in word_prompt
 
