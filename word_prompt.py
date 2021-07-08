@@ -13,7 +13,6 @@ def get_user_input_characters(user_input, output_row):
     refresh the screen if backspace () or delete line ()
     '''
     while True:
-
         # get new line if correct
         if user_input == output_row:
             user_input = ''
